@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kite 14 — Northlight</title>
+  <link rel="stylesheet" href="../library/apple-web.css">
+  <script src="../library/apple-web.js" defer></script>
+  <style>
+    /* Demo-only product visual: a CSS notebook with a glowing display. Replace with real renders. */
+    .device { width: min(1040px, 92vw); margin-inline: auto; perspective: 1600px; }
+    .device .lid {
+      aspect-ratio: 16 / 10.4; border-radius: 22px 22px 6px 6px; padding: 1.4%;
+      background: #2b2b2e; box-shadow: inset 0 0 0 1px #3a3a3e;
+      transform-origin: bottom center; transform: rotateX(calc((1 - var(--p, 1)) * -72deg));
+    }
+    .device .screen {
+      height: 100%; border-radius: 12px 12px 2px 2px; overflow: hidden; position: relative; background: #000;
+    }
+    .device .screen::before {
+      content: ""; position: absolute; inset: -20%;
+      background:
+        repeating-linear-gradient(90deg, transparent 0 3.2%, rgba(170, 205, 255, .55) 3.4%, transparent 4.6%),
+        radial-gradient(60% 70% at 50% 40%, rgba(120, 165, 255, .55), transparent 70%),
+        radial-gradient(40% 50% at 70% 70%, rgba(255, 255, 255, .35), transparent 70%);
+      filter: blur(2px);
+    }
+    .device .base { height: 18px; margin: 0 -4%; border-radius: 0 0 18px 18px; background: linear-gradient(#3a3a3e, #1c1c1e); }
+    .swatch-ink { background: #2e2e30; } .swatch-silver { background: #e3e4e5; } .swatch-dune { background: #d7c9b4; }
+    .tile .media.chip {
+      width: 160px; aspect-ratio: 1; border-radius: 28px; margin-top: 40px;
+      background: #2a2a2d; box-shadow: inset 0 0 0 1px #3d3d41; display: grid; place-items: center;
+      font-size: 32px; font-weight: 600; letter-spacing: 0.004em;
+    }
+    .gallery-item .art { position: absolute; inset: 0; }
+    .art-1 { background: radial-gradient(70% 90% at 70% 60%, #3c5a8c, #000 70%); }
+    .art-2 { background: radial-gradient(60% 80% at 30% 70%, #6b4b2f, #000 70%); }
+    .art-3 { background: radial-gradient(70% 90% at 60% 40%, #2f5b4b, #000 70%); }
+    .art-4 { background: radial-gradient(70% 90% at 50% 80%, #50506a, #000 70%); }
+  </style>
+</head>
+<body>
+
+<nav class="globalnav" aria-label="Global">
+  <ul>
+    <li><a class="brand" href="#">Northlight</a></li>
+    <li><a href="#">Store</a></li><li><a href="#">Notebooks</a></li><li><a href="#">Displays</a></li>
+    <li><a href="#">Audio</a></li><li><a href="#">Accessories</a></li><li><a href="#">Support</a></li>
+    <li><a href="#" aria-label="Bag">Bag</a></li>
+  </ul>
+</nav>
+
+<p class="ribbon theme-light">Trade in your current notebook and get credit toward Kite 14. <a class="link-more" href="#">Find out how</a></p>
+
+<div class="localnav theme-dark">
+  <div class="container inner">
+    <a class="title" href="#">Kite 14</a>
+    <div class="links">
+      <a href="#" aria-current="page">Overview</a><a href="#">Tech Specs</a><a href="#">Compare</a>
+      <a class="button button-sm" href="#">Buy</a>
+    </div>
+  </div>
+</div>
+
+<main>
+  <section class="hero theme-dark" aria-labelledby="hero-title">
+    <p class="t-eyebrow" data-reveal>Kite 14</p>
+    <h1 id="hero-title" class="t-hero" data-reveal>Light, finally.</h1>
+    <p class="t-body-reduced meta" data-reveal>Available from 12 November</p>
+    <p class="t-body-reduced price" data-reveal>From €1,899</p>
+    <div class="visual device" data-reveal><div class="lid"><div class="screen"></div></div><div class="base"></div></div>
+    <div class="cta-row" style="padding-bottom:120px"><a class="button" href="#">Buy</a><a class="link-more" href="#">Watch the film</a></div>
+  </section>
+
+  <section class="section section-tall theme-dark" aria-labelledby="hl">
+    <div class="container section-header">
+      <h2 id="hl" class="t-section">Get the highlights.</h2>
+      <a class="link-more t-body" href="#">Watch the event</a>
+    </div>
+    <div class="gallery">
+      <div class="gallery-track" tabindex="0" aria-label="Highlights">
+        <figure class="gallery-item"><div class="art art-1"></div><figcaption class="caption">A display that holds 1,600 nits outdoors, so the sun stops being a problem.</figcaption></figure>
+        <figure class="gallery-item"><div class="art art-2"></div><figcaption class="caption">1.1 kg. Thinner than a paperback at its thickest point.</figcaption></figure>
+        <figure class="gallery-item"><div class="art art-3"></div><figcaption class="caption">Up to 22 hours of battery for a full day and the flight home.</figcaption></figure>
+        <figure class="gallery-item"><div class="art art-4"></div><figcaption class="caption">Three ports on the left, one on the right. Exactly where your hands expect them.</figcaption></figure>
+      </div>
+      <div class="gallery-controls">
+        <button class="paddle" data-prev aria-label="Previous">‹</button>
+        <div class="gallery-dots"></div>
+        <button class="paddle" data-next aria-label="Next">›</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section theme-dark" aria-labelledby="display">
+    <div class="container-text lockup" data-reveal-group>
+      <p class="t-eyebrow" data-reveal>Display</p>
+      <h2 id="display" class="t-headline" data-reveal>Brighter. Everywhere.</h2>
+      <p class="t-intro" data-reveal>The Kite panel uses two stacked emitting layers, so it runs cooler and lasts longer at the same brightness. <strong>Outdoors it reaches 1,600 nits</strong>, and in a dark room it drops to a single nit for late reading.<sup><a href="#fn1">1</a></sup></p>
+    </div>
+  </section>
+
+  <section class="scrub theme-dark" aria-label="Opening the lid">
+    <div class="scrub-sticky">
+      <div class="device"><div class="lid"><div class="screen"></div></div><div class="base"></div></div>
+    </div>
+  </section>
+
+  <section class="section theme-dark" aria-labelledby="stats">
+    <div class="container center">
+      <h2 id="stats" class="t-section" data-reveal>The numbers do the talking.</h2>
+      <div class="stats" data-reveal-group>
+        <div class="stat" data-reveal><p class="label">Battery</p><p class="value"><span data-count="22">22</span></p><p class="unit">hours</p></div>
+        <div class="stat" data-reveal><p class="label">Weight</p><p class="value"><span data-count="1.1" data-decimals="1">1.1</span></p><p class="unit">kg</p></div>
+        <div class="stat" data-reveal><p class="label">Faster compiles</p><p class="value"><span data-count="2.4" data-decimals="1">2.4</span>×</p><p class="unit">vs. previous gen<sup><a href="#fn2">2</a></sup></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section theme-light" aria-labelledby="more">
+    <div class="container">
+      <div class="lockup" style="margin-bottom:48px" data-reveal>
+        <h2 id="more" class="t-headline">Made for the long day.</h2>
+      </div>
+      <div class="tiles" data-reveal-group>
+        <article class="tile theme-dark span-2" data-reveal>
+          <p class="t-eyebrow t-new">New</p>
+          <h3 class="t-headline-reduced" style="margin-top:8px">A keyboard that stays quiet in meetings.</h3>
+          <p class="t-body muted" style="margin-top:12px;max-width:520px">Low-travel keys with a damped return. Typing sits at 32 dB, about as loud as a whisper.</p>
+        </article>
+        <article class="tile theme-dark" data-reveal>
+          <h3 class="t-eyebrow-large">K2 chip.</h3>
+          <p class="t-body muted" style="margin-top:12px">Twelve cores and no fan. It never makes a sound.</p>
+          <div class="media chip" aria-hidden="true">K2</div>
+        </article>
+        <article class="tile" data-reveal style="background:#fff;color:var(--c-ink)">
+          <h3 class="t-eyebrow-large">Recycled aluminium.</h3>
+          <p class="t-body muted" style="margin-top:12px">The enclosure is 100% recycled metal, machined from a single block.</p>
+          <p style="margin-top:24px"><a class="link-more" href="#">Learn about materials</a></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section theme-white" aria-labelledby="compare">
+    <div class="container">
+      <h2 id="compare" class="t-section center" style="margin-bottom:48px" data-reveal>Which Kite is right for you?</h2>
+      <div class="compare" data-reveal-group>
+        <div class="compare-card" data-reveal>
+          <p class="t-caption t-new">New</p><h3 class="t-eyebrow-large">Kite 14</h3>
+          <div class="swatches"><span class="swatch-ink"></span><span class="swatch-silver"></span><span class="swatch-dune"></span></div>
+          <p class="t-body">From €1,899</p>
+          <div class="cta-row"><a class="button button-md" href="#">Buy</a><a class="link-more" href="#">Learn more</a></div>
+        </div>
+        <div class="compare-card" data-reveal>
+          <p class="t-caption">&nbsp;</p><h3 class="t-eyebrow-large">Kite 16</h3>
+          <div class="swatches"><span class="swatch-ink"></span><span class="swatch-silver"></span></div>
+          <p class="t-body">From €2,499</p>
+          <div class="cta-row"><a class="button button-md" href="#">Buy</a><a class="link-more" href="#">Learn more</a></div>
+        </div>
+        <div class="compare-card" data-reveal>
+          <p class="t-caption">&nbsp;</p><h3 class="t-eyebrow-large">Kite Air</h3>
+          <div class="swatches"><span class="swatch-silver"></span><span class="swatch-dune"></span></div>
+          <p class="t-body">From €1,299</p>
+          <div class="cta-row"><a class="button button-md" href="#">Buy</a><a class="link-more" href="#">Learn more</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="theme-white">
+    <div class="container footnotes">
+      <ol>
+        <li id="fn1">Brightness measured on a full-screen white field in a controlled lab environment. Results vary with content and settings.</li>
+        <li id="fn2">Based on compile times for a 1.2-million-line codebase compared with Kite 14 (2025). Fictional product for demonstration.</li>
+      </ol>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="cols">
+      <div><h3>Shop</h3><ul><li><a href="#">Notebooks</a></li><li><a href="#">Displays</a></li><li><a href="#">Accessories</a></li></ul></div>
+      <div><h3>Account</h3><ul><li><a href="#">Manage your ID</a></li><li><a href="#">Orders</a></li></ul></div>
+      <div><h3>Support</h3><ul><li><a href="#">Repairs</a></li><li><a href="#">Contact</a></li></ul></div>
+      <div><h3>Company</h3><ul><li><a href="#">Newsroom</a></li><li><a href="#">Careers</a></li></ul></div>
+    </div>
+    <p class="legal">Copyright © 2026 Northlight. A fictional brand used to demonstrate the apple-web style library.</p>
+  </div>
+</footer>
+</body>
+</html>
