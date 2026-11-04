@@ -8,13 +8,27 @@ count-up stats, tiles, compare cards and footnotes.
 Every value was measured from a live apple.com product page. See
 [`reference/measured-tokens.md`](reference/measured-tokens.md).
 
-## Install as a skill
+**Live demo:** https://youssef-110.github.io/apple-web/demo/
+
+## Install as a Claude Code skill
+
+macOS / Linux:
 
 ```bash
-git clone https://github.com/<you>/apple-web ~/.claude/skills/apple-web
+git clone https://github.com/youssef-110/apple-web.git ~/.claude/skills/apple-web
 ```
 
-Then ask Claude for "an apple.com-style landing page for …" or invoke `/apple-web`.
+Windows (PowerShell):
+
+```powershell
+git clone https://github.com/youssef-110/apple-web.git "$env:USERPROFILE\.claude\skills\apple-web"
+```
+
+No git? Download the ZIP (Code → Download ZIP), unzip, and rename the folder to `apple-web`
+inside `~/.claude/skills/`.
+
+Start a new Claude Code session, then ask for "an apple.com-style landing page for …" or run `/apple-web`.
+Update later with `git -C ~/.claude/skills/apple-web pull`.
 
 ## Use the library directly
 
